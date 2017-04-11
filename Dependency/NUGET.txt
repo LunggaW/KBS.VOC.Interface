@@ -1,0 +1,3 @@
+Install-Package Quartz
+Install-Package NLog
+Install-Package NLog.Config
