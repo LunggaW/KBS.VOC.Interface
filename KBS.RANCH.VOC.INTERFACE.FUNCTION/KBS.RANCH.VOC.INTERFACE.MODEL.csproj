@@ -8,8 +8,8 @@
     <ProjectGuid>{B62B94CB-C3AD-4F64-BC61-E93DF94A2732}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION</RootNamespace>
-    <AssemblyName>KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION</AssemblyName>
+    <RootNamespace>KBS.RANCH.VOCOLLECT.INTERFACE.MODEL</RootNamespace>
+    <AssemblyName>KBS.RANCH.VOCOLLECT.INTERFACE.MODEL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,8 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Function.cs" />
+    <Compile Include="Backup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TOCancellation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

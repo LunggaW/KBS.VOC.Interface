@@ -1,4 +1,4 @@
-﻿namespace KBS.RANCH.VOCOLLECT.INTERFACE.BACKUP
+﻿namespace KBS.RANCH.VOC.INTERFACE.TOCANCELLATION
 {
     partial class ProjectInstaller
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            this.serviceInstallerBackup = new System.ServiceProcess.ServiceInstaller();
+            this.serviceInstallerTOCancellation = new System.ServiceProcess.ServiceInstaller();
             // 
             // serviceProcessInstaller1
             // 
@@ -37,23 +37,23 @@
             this.serviceProcessInstaller1.Password = null;
             this.serviceProcessInstaller1.Username = null;
             // 
-            // serviceInstallerBackup
+            // serviceInstallerTOCancellation
             // 
-            this.serviceInstallerBackup.Description = "KBS Auto Interface VOC Backup";
-            this.serviceInstallerBackup.DisplayName = "KBS Auto Interface VOC Backup";
-            this.serviceInstallerBackup.ServiceName = "ServiceBackup";
+            this.serviceInstallerTOCancellation.Description = "KBS Auto Interface VOC TO Cancellation";
+            this.serviceInstallerTOCancellation.DisplayName = "KBS Auto Interface VOC TO Cancellation";
+            this.serviceInstallerTOCancellation.ServiceName = "ServiceTOCancellation";
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
-            this.serviceInstallerBackup});
+            this.serviceInstallerTOCancellation});
 
         }
 
         #endregion
 
         private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller serviceInstallerBackup;
+        private System.ServiceProcess.ServiceInstaller serviceInstallerTOCancellation;
     }
 }

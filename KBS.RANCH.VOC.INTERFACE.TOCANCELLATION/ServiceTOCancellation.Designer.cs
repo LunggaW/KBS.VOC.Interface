@@ -1,6 +1,6 @@
-﻿namespace KBS.RANCH.VOCOLLECT.INTERFACE.BACKUP
+﻿namespace KBS.RANCH.VOC.INTERFACE.TOCANCELLATION
 {
-    partial class ServiceBackup
+    partial class ServiceTOCancellation
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             // 
-            // ServiceBackup
+            // ServiceTOCancellation
             // 
             this.ServiceName = "Service1";
 

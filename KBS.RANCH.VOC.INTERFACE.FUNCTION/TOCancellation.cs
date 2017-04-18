@@ -10,9 +10,9 @@ using System.Security.Cryptography;
 using System.Text;
 using NLog;
 
-namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
+namespace KBS.RANCH.VOCOLLECT.INTERFACE.MODEL
 {
-    public class Function
+    public class TOCancellation
     {
         private String ConnectionStringSqlServer = ConfigurationManager.AppSettings["ConnectionStringSqlServer"];
 
@@ -28,9 +28,9 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
         //private OracleConnection con;
         private SqlConnection conSql;
 
-        public Function()
+        public TOCancellation()
         {
-          
+
             try
             {
                 IntervalDay = GetIntervalDay();
@@ -38,7 +38,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
                 IntervalMinute = GetIntervalMinute();
                 IntervalSecond = GetIntervalSecond();
             }
-            
+
             catch (Exception ex)
             {
                 logger.Error("Constructor");
@@ -47,7 +47,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
             }
         }
 
-      
+
 
         public void ConnectSQLServer()
         {
@@ -78,7 +78,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
         {
             try
             {
-                return Int32.Parse(ConfigurationManager.AppSettings["IntervalDay"]);;
+                return Int32.Parse(ConfigurationManager.AppSettings["IntervalDay"]); ;
             }
             catch (Exception ex)
             {
@@ -93,7 +93,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
         {
             try
             {
-                return Int32.Parse(ConfigurationManager.AppSettings["IntervalHour"]);;
+                return Int32.Parse(ConfigurationManager.AppSettings["IntervalHour"]); ;
             }
             catch (Exception ex)
             {
@@ -108,7 +108,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
         {
             try
             {
-                return Int32.Parse(ConfigurationManager.AppSettings["IntervalMinute"]);;
+                return Int32.Parse(ConfigurationManager.AppSettings["IntervalMinute"]); ;
             }
             catch (Exception ex)
             {
@@ -123,7 +123,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
         {
             try
             {
-                return Int32.Parse(ConfigurationManager.AppSettings["IntervalSecond"]);;
+                return Int32.Parse(ConfigurationManager.AppSettings["IntervalSecond"]); ;
             }
             catch (Exception ex)
             {
@@ -133,7 +133,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
                 return 0;
             }
         }
-   
+
         public void CloseSqlServer()
         {
             try
@@ -152,7 +152,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
         }
 
 
-        
+
 
         public Int32 ConvertDaytoSeconds()
         {
@@ -317,7 +317,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
             }
         }
 
-        public string ExecuteBackup()
+        public string ExecuteTOCancellation()
         {
             String ErrorString;
             try
@@ -347,6 +347,6 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.FUNCTION
             }
         }
 
-        
+
     }
 }

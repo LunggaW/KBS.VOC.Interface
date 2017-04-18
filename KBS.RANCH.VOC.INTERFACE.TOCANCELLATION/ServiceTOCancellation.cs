@@ -10,15 +10,14 @@ using KBS.RANCH.VOCOLLECT.INTERFACE.MODEL;
 using Quartz;
 using Quartz.Impl;
 
-namespace KBS.RANCH.VOCOLLECT.INTERFACE.BACKUP
+namespace KBS.RANCH.VOC.INTERFACE.TOCANCELLATION
 {
-    public partial class ServiceBackup : ServiceBase
+    public partial class ServiceTOCancellation : ServiceBase
     {
-
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        private Backup VocFunction = new Backup();
+        private TOCancellation VocFunction = new TOCancellation();
 
-        public ServiceBackup()
+        public ServiceTOCancellation()
         {
             InitializeComponent();
         }
@@ -125,7 +124,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.BACKUP
     public class HelloJob : IJob
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
-        private Backup VocFunction = new Backup();
+        private TOCancellation VocFunction = new TOCancellation();
 
 
         public void Execute(IJobExecutionContext context)
@@ -145,14 +144,14 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.BACKUP
             //CSMV3Function.ExecExportSalesPriceMaster();
             //CSMV3Function.ExecExportItemMaster();
             //CSMV3Function.ExecExportStoreMaster();
-            ExecuteBackup();
+            ExecuteInterface();
         }
 
-        public void ExecuteBackup()
+        public void ExecuteInterface()
         {
             try
             {
-                VocFunction.ExecuteBackup();
+                VocFunction.ExecuteTOCancellation();
             }
             catch (Exception ex)
             {
