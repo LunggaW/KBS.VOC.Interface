@@ -11,7 +11,8 @@
     <RootNamespace>KBS.RANCH.VOC.INTERFACE.TOCANCELLATION</RootNamespace>
     <AssemblyName>KBS.RANCH.VOC.INTERFACE.TOCANCELLATION</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -99,7 +100,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KBS.RANCH.VOC.INTERFACE.FUNCTION\KBS.RANCH.VOC.INTERFACE.MODEL.csproj">
+    <ProjectReference Include="..\KBS.RANCH.VOC.INTERFACE.MODEL\KBS.RANCH.VOC.INTERFACE.MODEL.csproj">
       <Project>{B62B94CB-C3AD-4F64-BC61-E93DF94A2732}</Project>
       <Name>KBS.RANCH.VOC.INTERFACE.MODEL</Name>
     </ProjectReference>

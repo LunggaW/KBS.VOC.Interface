@@ -340,7 +340,7 @@ namespace KBS.RANCH.VOCOLLECT.INTERFACE.MODEL
             }
             catch (Exception e)
             {
-                logger.Error("ExecBackup Function");
+                logger.Error("ExecuteTOCancellation Function");
                 logger.Error(e.Message);
                 this.CloseSqlServer();
                 return null;
